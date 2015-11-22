@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slug</title>
+    <script src="js/phaser.min.js"></script>
+    <script src="js/init_app.js"></script>
+    <script src="js/init_game.js"></script>
+    <script src="js/ledges.js"></script>
+    
+  <style>
+    body{
+      overflow: auto !important;
+    }
+  </style>
+</head>
+<body>
+
+<div id="game"></div>
+
+<script type="text/javascript">
+
+window.onload = function() {
+
+
+    // Les états possibles
+    game.state.add('init_game', MyGame.Boot);
+    game.state.add('init_app', MyGame.Boot);
+    game.state.add('game', MyGame.Game);
+
+    // On démarre avec l'état 'boot'
+    game.state.start('init_game');
+};
+
+</script>
+</body>
+</html>
